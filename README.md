@@ -7,7 +7,7 @@ It includes a complete pipeline from raw data cleaning in Python to analysis and
 - Cleaned and transformed 10 years of data
 - Structured PostgreSQL schema with fact and dimension tables
 - SQL based analysis of renewable share, production vs. load balance, and price volatility
-- Power BI dashboard with interactive insights by control zone and month
+- Power BI dashboard with interactive insights by control zone, year and month
 
 
 ## Folder Structure
