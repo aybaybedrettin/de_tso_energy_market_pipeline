@@ -1,11 +1,11 @@
-# Ignore PyCharm project settings and virtual environment
+# Ignore pycharm settings
 .idea/
 .venv/
 
-# Ignore report and unused intermediate files
+# Ignore the report and intermediate files
 report/
 germany_tso_zones.json
 total_load_ignore.py
 
-# Ignore oversized raw data folder
+# Ignore large raw data folder
 data/raw/actual_total_load_ignore/
