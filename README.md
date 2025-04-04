@@ -18,7 +18,7 @@ It includes a complete pipeline from raw data cleaning in Python to analysis and
         ready/        # Data sets generated in SQL for Power BI
     sql/              # SQL scripts(run in order)
     LICENSE           # Project license (MIT)
-    main.py           # The python script for data cleaning
+    main.py           # Python script for data cleaning
     README.md         # README
     requirements.txt  # Python dependencies
 
