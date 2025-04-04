@@ -77,7 +77,7 @@ SELECT
 			p.lignite + p.hard_coal + p.fossil_gas + 
 			p.other_conventional + p.nuclear
 		) - SUM(t.total_load)
-	) / NULLIF(SUM(t.total_load), 0), 1) AS surplus_pct
+	) / SUM(t.total_load), 1) AS surplus_pct
 FROM 
 	total_load t
 INNER JOIN 
@@ -96,13 +96,12 @@ SELECT
 	m.date AS month,
 	ROUND(p.volatility, 2) AS volatility,
 	ROUND(p.median_price, 2) AS median_price,
-	ROUND(p.volatility / NULLIF(p.median_price, 0), 2) AS volatility_ratio,
+	ROUND(p.volatility / p.median_price, 2) AS volatility_ratio,
 	CASE 
-		WHEN p.volatility / NULLIF(p.median_price, 0) >= 0.5 THEN 'Very High'
-		WHEN p.volatility / NULLIF(p.median_price, 0) < 0.5 AND p.volatility / NULLIF(p.median_price, 0) >= 0.35 THEN 'High'
-		WHEN p.volatility / NULLIF(p.median_price, 0) < 0.35 AND p.volatility / NULLIF(p.median_price, 0) >= 0.2 THEN 'Moderate'
-		WHEN p.volatility / NULLIF(p.median_price, 0) < 0.2 THEN 'Low'
-		ELSE 'Undefined'
+		WHEN p.volatility / p.median_price >= 0.5 THEN 'Very High'
+		WHEN p.volatility / p.median_price >= 0.35 THEN 'High'
+		WHEN p.volatility / p.median_price >= 0.2 THEN 'Moderate'
+		ELSE 'Low'
 	END AS volatility_labels
 FROM 
 	price_stats p
