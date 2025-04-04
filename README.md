@@ -12,7 +12,9 @@ It includes a complete pipeline from raw data cleaning in Python to analysis and
 
 ## Folder Structure
 germany_energy_analysis/
+
     dashboard/        # Images from the dashboard
+    
     data/
         raw/          # Raw input data sets(actual total load has been trimmed due to its initial size)
         cleaned/      # Python cleaned data ready for SQL
