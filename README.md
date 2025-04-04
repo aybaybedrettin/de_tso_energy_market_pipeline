@@ -47,8 +47,8 @@ I am happy to demonstrate the dashboard interactively upon request.
 ## SQL Notes
 - Create a postgres database and make sure it is selected as the default
 - Make sure that the scripts are connected to the appropriate database
-- To read the data, replace [Insert File Path]
-- Export the tables in the last script to csv
+- To read the data, replace "[Insert File Path]"
+- Export the tables from the last script to csv
 
 
 ## This project is designed to be reproducible:
