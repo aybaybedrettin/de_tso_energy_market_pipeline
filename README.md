@@ -11,7 +11,7 @@ It includes a complete pipeline from raw data cleaning in Python to analysis and
 
 
 ## Folder Structure
-    dashboard/        # Images from the dashboard
+    dashboard/        # Images from the dashboard and README
     data/
         raw/          # Raw input data sets(actual total load has been trimmed due to its initial size)
         cleaned/      # Python cleaned data ready for SQL
