@@ -11,7 +11,7 @@ It includes a complete pipeline from raw data cleaning in Python to analysis and
 
 
 ## Folder Structure
-    dashboard/        # Images from the dashboard and README
+    dashboard/        # The .pbix file, images from the dashboard and README
     data/
         raw/          # Raw input data sets(actual total load has been trimmed due to its initial size)
         cleaned/      # Python cleaned data ready for SQL
@@ -39,8 +39,8 @@ All data used in this project is public:
 
 
 ## Dashboard
-Due to Power BI publishing restrictions, the interactive dashboard is not publicly accessible.  
-However, screenshots of the final version are available in the `dashboard/` folder.
+Due to Power BI publishing restrictions, the interactive dashboard could only be shared with the source file.  
+Screenshots of the final version are available in the `dashboard/` folder.
 
 I am happy to demonstrate the dashboard interactively upon request.
 

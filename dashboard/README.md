@@ -1,6 +1,8 @@
 # Power BI Dashboard
-This folder contains screenshots of the interactive Power BI dashboard built for the Germany Energy Market and TSO Analysis project.
-Due to limitations in sharing Power BI dashboards publicly, the interactive version cannot be hosted online. However, images of the final dashboard views are provided below. I am happy to demonstrate the dashboard live upon request.
+This folder contains the .pbix file and screenshots of the interactive Power BI dashboard built for the Germany Energy Market and TSO Analysis project.
+Due to limitations in sharing Power BI dashboards publicly, the interactive version cannot be hosted online. However, the .pbix file can be opened with Power BI, furthermore images of the final dashboard are provided.
+If you decide to open the .pbix file to view the dashboard and encountering problems, try to change the locale settings to English (USA).
+I am also happy to demonstrate the dashboard live upon request.
 
 ## Dashboard Overview
 The dashboard provides monthly insights (2015–2025) into electricity production, load, price, and congestion management across Germany’s four Transmission System Operators:
