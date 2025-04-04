@@ -24,7 +24,7 @@ A bar chart shows the top 3 generation sources (e.g., Lignite, Wind, Gas) by MWh
 A KPI card displays the share of renewables (biomass, wind, solar, hydro, etc.) in total electricity production.
 
 ### 4. **Total Load and Congestion Costs**
-- **Total Load in MWh**: Energy demand in the selected control zone and time period.
+- **Total Load in MWh**: Energy demand in the selected control zone and time period.(Data missing for 50Hertz in February 2025)
 - **Costs of Congestion Management**: Redispatching + countertrading costs in the selected zone and time period.
 
 ### 5. **Electricity Price Statistics**
