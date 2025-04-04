@@ -36,12 +36,12 @@ SELECT
 		100.0 * SUM(
 			p.biomass + p.hydropower + p.wind_offshore + p.wind_onshore + 
 			p.photovoltaics + p.other_renewable + p.hydro_pumped_storage
-		) / NULLIF(SUM(
+		) / SUM(
 			p.biomass + p.hydropower + p.wind_offshore + p.wind_onshore + 
 			p.photovoltaics + p.other_renewable + p.hydro_pumped_storage +
 			p.lignite + p.hard_coal + p.fossil_gas + 
 			p.other_conventional + p.nuclear
-		), 0), 1
+		), 1
 	) AS renewable_share_pct
 FROM 
 	production_type_actual p
