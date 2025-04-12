@@ -6,10 +6,10 @@ This folder contains the interactive Power BI dashboard built for visualizing ke
 
 ## Files
 
-- `EnergyDashboard.pbix`  
+- `de_energy_dashboard.pbix`  
   The full Power BI dashboard with data snapshot included.
 
-- `EnergyDashboardTemplate.pbit`  
+- `de_energy_dashboard.pbit`  
   A clean Power BI template that retains all visuals, measures, filters, and structure, but does not include any data. Use this to connect to your own PostgreSQL instance.
 
 - `screenshots/`  
