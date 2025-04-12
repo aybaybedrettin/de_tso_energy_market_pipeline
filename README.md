@@ -11,8 +11,8 @@ This project builds a fully automated data pipeline for downloading, cleaning, s
 de_energy_pipeline/
 │
 ├── dashboard/               # Power BI visuals (.pbix, .pbit)
-│   ├── EnergyDashboard.pbix
-│   ├── EnergyDashboardTemplate.pbit
+│   ├── de_energy_dashboard.pbix
+│   ├── de_energy_dashboard.pbit
 │   ├── screenshots/
 │   └── README.md
 │
@@ -68,7 +68,7 @@ de_energy_pipeline/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/aybaybedrettin/de_energy_pipeline.git
+git clone https://github.com/aybaybedrettin/de_tso_energy_market_pipeline.git
 cd de_energy_pipeline
 ```
 
