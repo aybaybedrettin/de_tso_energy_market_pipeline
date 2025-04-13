@@ -69,7 +69,7 @@ de_energy_pipeline/
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/aybaybedrettin/de_tso_energy_market_pipeline.git
-cd de_energy_pipeline
+cd de_tso_energy_market_pipeline
 ```
 
 ### 2. Set Up Python Environment (Windows)
