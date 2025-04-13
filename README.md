@@ -17,8 +17,8 @@ de_energy_pipeline/
 │   └── README.md
 │
 ├── data/
-│   ├── raw/                 # Raw CSV files downloaded via Selenium
-│   └── cleaned/             # Cleaned datasets ready for database insertion
+│   ├── raw/                 # Raw CSV files downloaded via Selenium will be here
+│   └── cleaned/             # Cleaned datasets ready for database insertion will be here
 │
 ├── python_scripts/          # Data scraping and cleaning logic
 │   ├── fetch_smard.py
