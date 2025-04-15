@@ -112,6 +112,8 @@ All data used in this project is publicly available from [SMARD.de](https://www.
 
 ---
 
+### 6. Common issues
+
 ## Contact
 
 For questions feel free to reach out:

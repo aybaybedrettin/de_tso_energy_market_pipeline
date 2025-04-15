@@ -2,6 +2,7 @@
 # Make sure chromedriver.exe is in path for selenium.
 
 from python_scripts.fetch_smard import setup_driver, download_dataset
+import time
 # ------------------------------------------------------------
 # Data Scraping
 # ------------------------------------------------------------
@@ -65,6 +66,7 @@ try:
         )
 finally:
     driver.quit()
+    time.sleep(5) # Otherwise the price data is sometimes left out of cleaning
 # ------------------------------------------------------------
 # Data cleaning
 # ------------------------------------------------------------

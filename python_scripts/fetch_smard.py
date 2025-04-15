@@ -16,6 +16,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.action_chains import ActionChains
 from pathlib import Path
 
 
@@ -70,6 +71,7 @@ def download_dataset(
     """
     wait = WebDriverWait(driver, 10)
 
+    print("[INFO] Converting date range to timestamps...")
     start_dt = int(datetime.strptime(start_date, "%m/%d/%Y").timestamp() * 1000)
     end_dt = int(datetime.strptime(end_date, "%m/%d/%Y").timestamp() * 1000)
 
@@ -79,6 +81,7 @@ def download_dataset(
     time.sleep(1)
 
     # Main category
+    print("[INFO] Selecting main category...")
     wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'select[aria-label="Main category"]'))).click()
     select_element = driver.find_element(By.CSS_SELECTOR, 'select[aria-label="Main category"]')
 
@@ -91,6 +94,7 @@ def download_dataset(
     time.sleep(1)
 
     # Data category
+    print("[INFO] Selecting data category...")
     wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'select[aria-label="Data category"]'))).click()
     data_select_element = driver.find_element(By.CSS_SELECTOR, 'select[aria-label="Data category"]')
 
@@ -103,6 +107,7 @@ def download_dataset(
     time.sleep(1)
 
     # Bidding zone
+    print("[INFO] Selecting bidding zone...")
     wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'select[aria-label="Select country/bidding zone"]'))).click()
     zone_select_element = driver.find_element(By.CSS_SELECTOR, 'select[aria-label="Select country/bidding zone"]')
 
@@ -115,6 +120,7 @@ def download_dataset(
     time.sleep(1)
 
     # Resolution
+    print("[INFO] Selecting resolution...")
     wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'select[aria-label="Select resolution"]'))).click()
     res_select_element = driver.find_element(By.CSS_SELECTOR, 'select[aria-label="Select resolution"]')
 
@@ -127,6 +133,7 @@ def download_dataset(
     time.sleep(1)
 
     # Filetype
+    print("[INFO] Selecting filetype...")
     wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, 'select[aria-label="Select filetype"]'))).click()
     type_select_element = driver.find_element(By.CSS_SELECTOR, 'select[aria-label="Select filetype"]')
 
@@ -138,10 +145,13 @@ def download_dataset(
 
     time.sleep(1)
 
+    print("[INFO] Clicking download button...")
     download_dir = os.path.join("data", "raw")
     before_files = set(Path(download_dir).glob("*"))
     # Download button
     download_button = wait.until(EC.element_to_be_clickable((By.ID, "help-download")))
+    ActionChains(driver).move_to_element(download_button).perform()
+    time.sleep(0.5)
     download_button.click()
 
     time.sleep(3)
@@ -163,4 +173,7 @@ def download_dataset(
         file_ext = new_file.suffix
 
         filename = f"{category_part}_{zone_part}_{res_part}_{start_dt_fmt}_{end_dt_fmt}{file_ext}"
+        print(f"[INFO] Renaming downloaded file to: {filename}")
         new_file.rename(Path(download_dir) / filename)
+    else:
+        print("[ERROR] No new file detected. Download may have failed or taken too long.")
