@@ -1,5 +1,6 @@
 /*
 Creating the data tables including dimension tables for control zone, day and the month.
+After creating the data tables run insert_to_sql.py.
 */
 
 CREATE TABLE zone_dim (

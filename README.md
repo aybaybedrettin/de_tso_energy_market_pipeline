@@ -157,4 +157,3 @@ All data used in this project is publicly available from [SMARD.de](https://www.
 
 - GitHub: [aybaybedrettin](https://github.com/aybaybedrettin)  
 - Email: aybaybedrettin@gmail.com
-```
