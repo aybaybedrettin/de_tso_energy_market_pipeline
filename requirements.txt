@@ -1,2 +1,3 @@
 pandas==2.2.3
+psycopg2==2.9.10
 selenium==4.31.0
